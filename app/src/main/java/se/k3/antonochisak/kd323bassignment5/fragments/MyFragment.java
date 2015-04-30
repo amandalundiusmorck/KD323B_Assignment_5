@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -43,7 +44,7 @@ import static se.k3.antonochisak.kd323bassignment5.helpers.StaticHelpers.FIREBAS
  * A simple {@link Fragment} subclass.
  */
 
-public class MyFragment extends MoviesFragment implements Callback<List<RootApiResponse>>, GridView.OnItemClickListener {
+public class MyFragment extends MoviesFragment implements Callback<List<RootApiResponse>>, AdapterView.OnItemClickListener {
 
 
     public MyFragment() {
@@ -68,7 +69,7 @@ public class MyFragment extends MoviesFragment implements Callback<List<RootApiR
     MyAdapter mAdapter;
 
     @InjectView(R.id.listView)
-    GridView mMoviesList;
+    ListView mMoviesList;
 
     @InjectView(R.id.progress_bar)
     ProgressBar mProgressBar;
